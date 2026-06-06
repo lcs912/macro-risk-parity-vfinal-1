@@ -18,7 +18,6 @@ jobs:
 
       - name: Install Dependencies
         run: pip install -r requirements.txt
-
       - name: Run System
         env:
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
