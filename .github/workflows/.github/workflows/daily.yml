@@ -18,4 +18,9 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - run: python jobs/run.py
+      - name: Run System
+  env:
+    EMAIL_USER: ${{ secrets.EMAIL_USER }}
+    EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+    EMAIL_TO: ${{ secrets.EMAIL_TO }}
+  run: python jobs/run.py
